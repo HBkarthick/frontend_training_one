@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title></title>
+  <style>
+  #main-menu{
+   display: flex;
+   justify-content: space-around;
+   margin-top: 30px;
+   grid-gap: 10px;
+ }
+ @media only screen and (max-width: 760px) {
+  #main-menu{
+   display: none;
+
+ }
+
+}
+@media only screen and (min-width: 760px) {
+  #sub-menu{
+   margin-top: 20px;
+   display: none;
+ }
+ #menu-button{
+  display: none;
+ }
+
+}
+
+body{
+ background-image: url(srt.svg),linear-gradient(130deg, #f93d66, #6d47d9);
+ min-height: calc(100vh - 100px);
+/* margin: 50px;*/
+ background-attachment: fixed;
+ letter-spacing: -1px;
+}
+
+.hed{
+
+  background-image: url('taco.jpg');
+  min-height: 400px;
+  background-position: bottom right;
+  background-size:cover ;
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+  
+}
+.hed p,#h3{
+  background-color:#ffc600;
+}
+#ccc { padding: 0px 0; text-align:center; }
+
+.photo {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(177px,1fr));margin: 20px 20px;
+ /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+}
+
+.photo img {
+  width: 100%;
+}
+
+.photo h2 {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  font-size: 1em;
+}
+
+.photo h2:before, .photo h2:after {
+  display: block;
+  content: '';
+  height: 10px;
+  background: linear-gradient(to var(--direction, left), var(--yellow), transparent);
+}
+
+.photo h2:after {
+  --direction: right;
+}
+
+#main-menu .menu-item{
+padding: 5px 40px 0;background-color:#ffc600;
+}
+#main-menu{
+  margin-bottom: 20px;
+}
+
+#menu-button .open .close-menu{
+display: none;
+}
+#menu-button .open.closee .open-menu{
+display: none;
+}
+#menu-button .open .open-menu{
+display: block;
+}
+#menu-button .open.closee .close-menu{
+display: block;
+}
+#sub-item{
+  background-color:#ffc600;min-width: 150px;padding-top: 5px;padding-bottom: 1px;
+}
+#sub-item h3{
+  style="font-size: 15px; padding-top: 5px;
+}
+#rate{
+  min-height: 195px;min-width: 100px; background-color:#ffc600; margin-bottom: 10px;text-align:center;box-sizing: inherit;padding-top: 20%;
+}
+#beerc{
+  border:solid;margin:20px 0px;background-color: white;
+}
+#cor{
+  color: rgba(0,0,0,0.5);
+}
+#art{
+  background-color:white; padding-top: 7%;justify-content: left;
+}
+@media only screen and (max-width: 577px) {
+  #rate{
+    padding-top: 10%;
+  }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+   <div class="row" id="main-menu">
+     <div class="menu-item" ><h5>TACOS</h5></div>
+     <div class="menu-item" ><h5>BEERS</h5></div>
+     <div class="menu-item" ><h5>WINES</h5></div>
+     <div class="menu-item" ><h5>DESSERTS</h5></div>
+     <div class="menu-item" ><h5>RESERVATIONS</h5></div>  
+   </div>
+
+   <div id="menu-button">
+     <button class="bt open "style="margin-bottom: 20px;margin-left:15px;margin: 20px 20px; background-color:#ffc600; max-height: 35px;">
+     <p class="open-menu"><img src="x.svg"  width="15px" >Menu</p>
+      <p class="close-menu"><img src="list.svg">Menu</p>
+    </button>
+   </div>
+
+   <div class="row  row-cols-xs-1 row-cols-lg-5 row-cols-md-5 text-center g-2" id="sub-menu"  style="margin:0 1px">
+    <div class="col">
+      <div class="  mb-3 " id="sub-item"><h5 >TACOS</h5></div>
+    </div>
+    <div class="col">
+      <div class="  mb-3"id="sub-item"><h5>BEERS</h5></div>
+
+    </div>
+    <div class="col">
+      <div class=" mb-3"id="sub-item"><h5>WINES</h5></div>
+
+    </div>
+    <div class="col">
+      <div class=" mb-3"id="sub-item"><h5 >DSESSERTS</h5></div>
+    </div>
+    <div class="col" >
+      <div class=" mb-3 "id="sub-item" ><h5>RESERVATIONS</h5></div>
+      
+    </div>
+
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row" style="grid-row-gap:10px;">
+      <div class="col-sm-8">
+       <div class="hed">
+        <h3 id="h3"><b>Terry's Taco Joint</b></h3>
+        <p><b>Pretty Good Tacos!</b></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+     <div class="column">
+       <div class="colsm-6" id="rate">
+        <p style="font-size:40px;font-weight: 300;"><b>$ 1.99</b></p>
+        <p style="font-size: 20px"><b>Tacos</b></p>
+      </div>
+      <div class="colsm-6" id="rate">
+        <p style="font-size:40px;font-weight: 300;"><b>$ 3.99</b></p>
+        <p style="font-size: 20px"><b>Kombucha</b></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid" id="" style="min-width:200px;">
+	<div class="row row-cols-1  row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-lg-3 text-center">
+    <div class="col">
+      <div class="p-3" id="beerc">
+        <span class="icon"style="font-size: 50px;">🍺</span>
+        <h3>Beer</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="p-3 md-20"id="beerc">
+        <span class="icon"style="font-size: 50px;">🍺</span>
+        <h3>Beer</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="p-3"id="beerc">
+        <span class="icon"style="font-size: 50px;">🍺</span>
+        <h3>Beer</h3>
+        <p id="cor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="p-3"id="beerc">
+        <span class="icon"style="font-size: 50px;">🍺</span>
+        <h3>Beer</h3>
+        <p id="cor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row " style="text-align:left;margin:0px 15px;padding-bottom: 20px;min-width: 170px;">
+  <div class="col-sm-5 " id="art">
+   <img src="qq.png" class="img-fluid" width="340px">
+ </div>
+ <div class="col-sm-7" id="art">
+   <h2>Featured Taco</h2>
+   <p>Slim Profile, easy to hold and loaded with cheese.</p>
+   <p>This is the one you have been waiting for</p>
+   <button style="margin-bottom:15px" >Learn More →</button>
+ </div>
+
+</div>
+
+
+
+
+<div class="photo" style="">
+      <h2 >Instant Grams</h2>
+  <img src="1.jfif" >
+  <img src="2.jfif">
+  <img src="3.jfif">
+  <img src="4.jfif">
+  <img src="5.jfif">
+  <img src="6.jfif">
+  <img src="7.jfif">
+  <img src="8.jfif">
+  <img src="9.jfif">
+  <img src="10.jfif">
+
+</div>
+</div>
+
+
+</div>
+
+
+<script>
+  $(document).ready(function(){
+    $(".bt").click(function(event){
+      $(".open").toggleClass('closee');
+      $("#sub-menu").toggle();
+
+
+
+
+
+
+
+
+     //if ($(".open")) {
+    
+ //     $(".open").toggleClass('close');
+ //     $(".open").toggleClass('close');
+  //  }
+  //  if($(".close")){
+   //   $(".close").toggleClass('open');
+    //}
+
+
+    // 	$(".open").text($(".open").text()=='×Menu'?'☰Menu':'×Menu');
+    //  var element=document.querySelector('#sub-menu');
+    //  var display=element.style.display;
+    //  if (display=="none") {
+    //   $("#sub-menu").css("display","");
+    // }else{
+    //   $("#sub-menu").css("display","none");
+    // }
+  });
+  });
+
+
+</script>
+</body>
+</html>
